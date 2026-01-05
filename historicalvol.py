@@ -12,4 +12,4 @@ def historical_vol(ticker):
     print(ticker, "2025 monthy volatility:", round(monthly_standev * 100, 2),"%")
     print(ticker, "2025 annualized volatility:", round(year_standev * 100, 2),"%")
 
-historical_vol('AAPL')
+historical_vol('AAPL') #Enter the ticker of a stock and the program will return it's average daily, monthly, and overall annualized volatility from 2025
