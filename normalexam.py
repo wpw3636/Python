@@ -18,7 +18,7 @@ for x in range(N):
         scores[x] = 100
 smean = sum(scores) / N
 svar = 0
-for x in range(0,N):
+for x in range(N):
     r = (scores[x] - smean) ** 2 / (N - 1)
     svar += r
 s = math.sqrt(svar)
