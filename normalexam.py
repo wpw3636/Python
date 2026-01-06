@@ -8,7 +8,7 @@ sigma = 10
 N = 1000
 
 scores = []
-for _ in range(1,N + 1):
+for _ in range(N):
     r = random.gauss(mu,sigma)
     scores.append(r)
 for x in range(N):
