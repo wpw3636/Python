@@ -3,12 +3,12 @@ import statistics as stat
 import matplotlib.pyplot as plt
 
 mu = 0.0005 #mean daily movement%
-sigma = 0.02# #standard deviation of daily move
+sigma = 0.2# #standard deviation of daily move
 P = 100 #stock price
 N = 252 #trading days
 
-returnonday = []
-for _ in range(N):
+returnonday = [0]
+for _ in range(N-1):
     returnonday.append(random.gauss(mu,sigma))
 
 priceonday = [P]
@@ -30,4 +30,8 @@ plt.plot(priceonday)
 plt.xlabel("Day")
 plt.ylabel("Price")
 plt.title("Stock Price")
-plt.show()
+plt.scatter(priceonday.index(maxP), maxP, color="green", label="Max Price")
+plt.scatter(priceonday.index(minP), minP, color="red", label="Min Price")
+plt.legend()
+plt.show(block = 0)
+input("Press enter to close chart")
