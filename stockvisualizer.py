@@ -2,9 +2,11 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import numpy as np
 
+#inputs
 ticker = 'AAPL' #Enter ticker of a stock here
 startdate = '2021-01-01' #Enter starting date in format YYYY-MM-DD
 enddate = '2025-12-31' #Enter ending date in format YYYY-MM-DD
+
 data0 = yf.download(ticker, start=startdate, end=enddate)['Close']
 data = np.array(data0)
 date = np.array(data0.index)
