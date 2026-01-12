@@ -31,10 +31,11 @@ for n in range(len(data)):
             x += data[n - z]
         longMA = np.append(longMA,[x/100])
 
-plt.plot(date, data, label = ticker)
-plt.plot(date, shortMA, label = "20 day moving average")
-plt.plot(date, longMA, label = "100 day moving average")
+plt.plot(date, data, lw = 1, label = ticker)
+plt.plot(date, shortMA, lw = 1, label = "20 day moving average")
+plt.plot(date, longMA, lw = 1, label = "100 day moving average")
 plt.legend()
+plt.xticks(fontsize = 8)
 plt.xlabel("Date")
 plt.ylabel("Price")
 plt.title(ticker)
