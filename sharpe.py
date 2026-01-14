@@ -4,7 +4,7 @@ import yfinance as yf
 
 #inputs
 ticker = "SPY" #Enter ticker of a stock here
-startdate = "2024-10-01" #Enter starting date in format YYYY-MM-DD
+startdate = "2024-10-01" #Enter starting date in format YYYY-MM-DD (The chart will actually start 90 days after this date)
 enddate = "2025-12-31" #Enter ending date in format YYYY-MM-DD
 
 data0 = yf.download(ticker, start=startdate, end=enddate)["Close"]
